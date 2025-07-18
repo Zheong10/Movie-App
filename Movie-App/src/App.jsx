@@ -1,11 +1,12 @@
-import React from "react";
-import Search from './components/search.jsx';
+import { useState } from "react";
+import Search from './components/search.jsx'; // Make sure the casing matches the actual file
 import MovieCard from "./components/MovieCard";
 import { Spinner } from "./components/Spinner";
 
 
-const App = () => {
 
+const App = () => {
+  const [searchTerm, setsearchTerm] = useState('I AM BATMAN')
 
 
   return (
@@ -20,7 +21,7 @@ const App = () => {
             Without the Hassle
           </h1>
      </header>
-          <Search/>
+          <Search searchTerm ={searchTerm} setsearchTerm = {setsearchTerm} />
       </div>
     </main>
   );
